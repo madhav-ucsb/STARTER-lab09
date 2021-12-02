@@ -53,10 +53,11 @@ void addIntToStartOfList(LinkedList *list, int value) {
   //   if it is the only node on the list, or to the "old" head if there 
   if(list->head == NULL)
   {
-    list -> head ->data = value;
+    list -> head = new Node;
     list->head->next = NULL;
-    list-> tail->data = value;
-    list->tail->next = NULL;
+    list-> head->data = value;
+    
+    list -> tail = list->head;
   }
   else
   {
